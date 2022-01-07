@@ -1,0 +1,15 @@
+import sys
+
+N, K = map(int, input().split())
+
+A = []
+for i in range(N):
+    A.append(int(input()))      
+A.reverse()    
+
+count = 0
+for j in range(N):
+    count = count + K//A[j]
+    K = K%A[j]
+    
+print(count)
